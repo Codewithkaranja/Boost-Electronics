@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Smartphones – Boost Electronics</title>
-  <!-- Jost font from Google Fonts -->
+  <!-- Jost font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 (free) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="smartphones.css">
-  
 </head>
 <body>
   <!-- TOP BAR -->
@@ -30,12 +29,12 @@
     </div>
   </div>
 
-  <!-- MAIN HEADER -->
-  <div class="main-header">
+  <!-- STICKY MAIN HEADER -->
+  <header class="main-header">
     <div class="container header-grid">
       <a href="index.html" class="logo">Boost<span>Electronics</span></a>
       <div class="search-wrapper">
-        <div class="category-dropdown">
+        <div class="category-dropdown" id="allCategoriesBtn">
           All Categories <i class="fas fa-chevron-down"></i>
         </div>
         <input type="text" id="searchInput" placeholder="Search smartphones...">
@@ -46,27 +45,38 @@
         <strong>+254 723 562 484</strong>
       </div>
       <div class="account-links">
-        <a href="#"><i class="far fa-user"></i> <span class="account-text">My Account</span></a>
-        <a href="#"><i class="fas fa-sign-in-alt"></i> <span class="account-text">Login</span></a>
-        <div class="cart-preview">
+        <a href="#"><i class="far fa-user"></i> <span class="account-text">Account</span></a>
+        <div class="cart-preview" id="cartPreview">
           <i class="fas fa-shopping-cart"></i>
-          <span>0</span>
-          <span>KSh 0.00</span>
+          <span id="cartCount">0</span>
+          <span id="cartTotal">KSh 0</span>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <!-- NAVIGATION -->
   <div class="nav-section">
     <div class="container nav-container">
-      <div class="shop-categories">
-        <i class="fas fa-bars"></i> Shop Categories
+      <div class="shop-categories" id="shopCategoriesToggle">
+        <i class="fas fa-bars"></i> Shop Categories <i class="fas fa-chevron-down"></i>
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="laptops.html">Laptops</a></li>
-        <li><a href="smartphones.html">Smartphone <span class="badge">Hot</span></a></li>
+        <li class="dropdown">
+          <a href="smartphones.html" class="dropdown-toggle">Smartphones <span class="badge">Hot</span> <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-brand="apple">Apple</a></li>
+            <li><a href="#" data-brand="samsung">Samsung</a></li>
+            <li><a href="#" data-brand="google">Google</a></li>
+            <li><a href="#" data-brand="xiaomi">Xiaomi</a></li>
+            <li><a href="#" data-brand="oneplus">OnePlus</a></li>
+            <li><a href="#" data-brand="oppo">OPPO</a></li>
+            <li><a href="#" data-brand="vivo">Vivo</a></li>
+            <li><a href="#" data-brand="huawei">Huawei</a></li>
+          </ul>
+        </li>
         <li><a href="headphones.html">Headphones</a></li>
         <li><a href="cameras.html">Camera</a></li>
         <li><a href="deals.html">Deals</a></li>
@@ -75,20 +85,45 @@
         <span></span><span></span><span></span>
       </div>
     </div>
+    <!-- Categories Dropdown (Shop Categories) -->
+    <div class="categories-dropdown" id="categoriesDropdown">
+      <div class="container">
+        <div class="categories-grid">
+          <a href="#" data-category="smartphones">Smartphones</a>
+          <a href="#" data-category="flagship">Flagship</a>
+          <a href="#" data-category="budget">Budget</a>
+          <a href="#" data-category="accessories">Accessories</a>
+          <a href="#" data-brand="apple">Apple</a>
+          <a href="#" data-brand="samsung">Samsung</a>
+          <a href="#" data-brand="google">Google</a>
+          <a href="#" data-brand="xiaomi">Xiaomi</a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html">Home</a>
       <a href="laptops.html">Laptops</a>
-      <a href="smartphones.html">Smartphone</a>
+      <div class="mobile-dropdown">
+        <a href="smartphones.html" class="mobile-dropdown-toggle">Smartphones <i class="fas fa-chevron-down"></i></a>
+        <div class="mobile-dropdown-menu">
+          <a href="#" data-brand="apple">Apple</a>
+          <a href="#" data-brand="samsung">Samsung</a>
+          <a href="#" data-brand="google">Google</a>
+          <a href="#" data-brand="xiaomi">Xiaomi</a>
+          <a href="#" data-brand="oneplus">OnePlus</a>
+          <a href="#" data-brand="oppo">OPPO</a>
+        </div>
+      </div>
       <a href="headphones.html">Headphones</a>
       <a href="cameras.html">Camera</a>
       <a href="deals.html">Deals</a>
-      <a href="#"><i class="far fa-user"></i> My Account</a>
-      <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="#"><i class="far fa-user"></i> Account</a>
     </div>
   </div>
 
-  <!-- TODAY'S DEALS SWIPER (smartphone-focused) -->
-  <section class="deals-section">
+  <!-- MINI DEALS SECTION -->
+  <section class="deals-section mini">
     <div class="container">
       <div class="deals-header">
         <h2>Smartphone <span>Deals</span> <span class="badge" style="background: var(--accent); color: black;">Hot</span></h2>
@@ -100,27 +135,27 @@
             <div class="deal-slide">
               <div class="deal-content">
                 <h3>📱 iPhone 15 Pro</h3>
-                <p>Up to KSh 15,000 off + free case</p>
+                <p>Up to KSh 15,000 off</p>
               </div>
-              <button class="deal-btn">Shop Now →</button>
+              <button class="deal-btn">Shop</button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="deal-slide">
               <div class="deal-content">
                 <h3>🚀 Samsung S24 Ultra</h3>
-                <p>Trade-in & get KSh 20,000 extra</p>
+                <p>Trade-in extra KSh 20,000</p>
               </div>
-              <button class="deal-btn">Shop Now →</button>
+              <button class="deal-btn">Shop</button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="deal-slide">
               <div class="deal-content">
                 <h3>🎧 Budget Phones</h3>
-                <p>From KSh 12,999 with free earphones</p>
+                <p>From KSh 12,999</p>
               </div>
-              <button class="deal-btn">Shop Now →</button>
+              <button class="deal-btn">Shop</button>
             </div>
           </div>
         </div>
@@ -130,12 +165,12 @@
   </section>
 
   <!-- ALL SMARTPHONES GRID -->
-  <section class="products-section">
+  <section class="products-section" id="smartphonesGridSection">
     <div class="container">
       <div class="section-header">
         <h2>All <span>Smartphones</span></h2>
         <div>
-          <select id="sortFilter" style="padding: 0.5rem 1rem; border-radius: 40px; border: 2px solid var(--border-light);">
+          <select id="sortFilter" class="sort-select">
             <option value="default">Sort by</option>
             <option value="priceLow">Price: Low to High</option>
             <option value="priceHigh">Price: High to Low</option>
@@ -147,12 +182,12 @@
     </div>
   </section>
 
-  <!-- PROMO BANNER (smartphone specific) -->
+  <!-- PROMO BANNER -->
   <div class="container">
-    <div class="promo-banner" style="background: linear-gradient(135deg, var(--primary) 0%, var(--text-dark) 100%); border-radius: var(--border-radius); padding: 3rem; color: white; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin: 2rem 0;">
+    <div class="promo-banner" style="background: linear-gradient(135deg, var(--primary) 0%, var(--text-dark) 100%); border-radius: var(--border-radius); padding: 2rem; color: white; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin: 1.5rem 0;">
       <div>
-        <h3 style="font-size: 2.2rem;">📱 Buy 2 Get 1 Free</h3>
-        <p style="font-size: 1.2rem;">On selected accessories with any phone</p>
+        <h3 style="font-size: 1.8rem;">📱 Buy 2 Get 1 Free</h3>
+        <p style="font-size: 1rem;">On selected accessories</p>
       </div>
       <button class="deal-btn">shop now →</button>
     </div>
@@ -168,20 +203,53 @@
       <div class="swiper trending-swiper">
         <div class="swiper-wrapper" id="trendingSwiperWrapper"></div>
         <div class="swiper-pagination"></div>
-       
       </div>
     </div>
   </section>
 
-  <!-- MODAL -->
+  <!-- TRUST FEATURES -->
+  <section class="trust">
+    <div class="container trust-grid">
+      <div class="trust-item"><i class="fas fa-truck"></i><h4>Fast Delivery</h4><p>1-2 days</p></div>
+      <div class="trust-item"><i class="fas fa-shield-alt"></i><h4>Warranty</h4><p>Included</p></div>
+      <div class="trust-item"><i class="fas fa-headset"></i><h4>24/7 Support</h4><p>WhatsApp</p></div>
+      <div class="trust-item"><i class="fas fa-lock"></i><h4>Secure Payment</h4><p>M-Pesa, Cards</p></div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/254723562484?text=Hello%2C%20I'm%20interested%20in%20your%20products" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- MINI CART SIDEBAR -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <span class="cart-close" id="cartClose">&times;</span>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span id="sidebarTotal">KSh 0</span></div>
+      <button class="btn-primary" id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- MODAL (with Swiper gallery) -->
   <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-container" id="modalContainer">
+    <div class="modal-container">
       <span class="modal-close" id="modalClose">&times;</span>
       <div class="modal-breadcrumb" id="modalBreadcrumb">Home / Smartphones</div>
       <div class="modal-product">
+        <!-- Swiper gallery -->
         <div class="modal-gallery">
-          <div class="modal-main-img" id="modalMainImg"><img src="" alt=""></div>
-          <div class="modal-thumbnails" id="modalThumbnails"></div>
+          <div class="swiper modal-swiper" id="modalSwiper">
+            <div class="swiper-wrapper" id="modalSwiperWrapper"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
         <div class="modal-info">
           <h2 id="modalTitle">Product Title</h2>
@@ -189,7 +257,7 @@
           <div class="modal-stock" id="modalStock">In stock</div>
           <div class="modal-price" id="modalPrice">KSh 0</div>
           <table class="modal-specs" id="modalSpecs"></table>
-          <div class="delivery-info" id="modalDelivery">Estimated delivery 1-2 days • 6 months warranty</div>
+          <div class="delivery-info" id="modalDelivery">1-2 days • warranty</div>
           <div class="quantity-selector">
             <button class="quantity-btn" id="decrQty">-</button>
             <input type="text" class="quantity-input" id="quantity" value="1" readonly>
@@ -198,8 +266,7 @@
           <div class="modal-actions">
             <button class="btn-primary" id="addToCartModal"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
             <button class="btn-primary btn-whatsapp" id="whatsappModal"><i class="fab fa-whatsapp"></i> Order on WhatsApp</button>
-            <button class="btn-outline-dark"><i class="far fa-heart"></i> Wishlist</button>
-            <button class="btn-outline-dark"><i class="fas fa-balance-scale"></i> Compare</button>
+            <button class="btn-outline-dark" id="wishlistModal"><i class="far fa-heart"></i> Wishlist</button>
           </div>
           <div class="share">
             <span>Share: </span>
@@ -210,27 +277,10 @@
           </div>
         </div>
       </div>
-      <div class="product-details-tabs">
-        <div class="tab-headers">
-          <span class="tab-header active" data-tab="details">Product Details</span>
-          <span class="tab-header" data-tab="reviews">Reviews (0)</span>
-        </div>
-        <div class="tab-content" id="tabDetails"></div>
-        <div class="tab-content" id="tabReviews" style="display: none;"></div>
-      </div>
-      <div class="review-form" id="reviewForm">
-        <h4>Add a Review</h4>
-        <input type="text" placeholder="Your Name" style="width:100%; padding:0.8rem; margin-bottom:1rem; border-radius:8px; border:1px solid var(--border-light);">
-        <input type="email" placeholder="Your Email" style="width:100%; padding:0.8rem; margin-bottom:1rem; border-radius:8px; border:1px solid var(--border-light);">
-        <select style="width:100%; padding:0.8rem; margin-bottom:1rem; border-radius:8px;">
-          <option>1 star</option><option>2 star</option><option>3 star</option><option>4 star</option><option>5 star</option>
-        </select>
-        <textarea placeholder="Your Review" rows="4" style="width:100%; padding:0.8rem; margin-bottom:1rem; border-radius:8px;"></textarea>
-        <button class="btn-primary">Submit Review</button>
-      </div>
+      <!-- Related products (horizontal scroll) -->
       <div class="related-products">
         <h4>Related Smartphones</h4>
-        <div class="related-grid" id="relatedGrid"></div>
+        <div class="related-scroll" id="relatedGrid"></div>
       </div>
     </div>
   </div>
@@ -238,20 +288,20 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <div style="background: var(--bg-light); padding: 2rem; border-radius: var(--border-radius); margin-bottom: 3rem; text-align: center;">
-        <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">Sign Up For Newsletter & Get 20% Off</h3>
-        <div style="max-width: 500px; margin: 0 auto; display: flex;">
-          <input type="email" placeholder="Your e-mail address" style="flex:1; padding: 1rem; border: 1px solid var(--border-light); border-radius: 40px 0 0 40px;">
-          <button style="background: var(--primary); color: white; border: none; padding: 0 2rem; border-radius: 0 40px 40px 0; font-weight: 600;">Subscribe</button>
+      <div style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; text-align: center;">
+        <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Sign Up For Newsletter & Get 20% Off</h3>
+        <div style="max-width: 400px; margin: 0 auto; display: flex;">
+          <input type="email" placeholder="Your e-mail address" style="flex:1; padding: 0.8rem; border: 1px solid var(--border-light); border-radius: 40px 0 0 40px;">
+          <button style="background: var(--primary); color: white; border: none; padding: 0 1.5rem; border-radius: 0 40px 40px 0; font-weight: 600;">Subscribe</button>
         </div>
       </div>
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="logo" style="font-size: 1.8rem;">Boost<span>Electronics</span></div>
-          <p><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Ground Floor, Post Bank Building, Syokimau Avenue, opposite UTS Sacco, Machakos Town</p>
-          <p><i class="fas fa-phone"></i> +254 723 562 484 (Calls/WhatsApp)</p>
+          <div class="logo" style="font-size: 1.6rem;">Boost<span>Electronics</span></div>
+          <p><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Machakos Town</p>
+          <p><i class="fas fa-phone"></i> +254 723 562 484</p>
           <p><i class="fas fa-envelope"></i> info@boostelectronics.co.ke</p>
-          <div class="payment-icons" style="font-size: 2rem; color: var(--text-light);">
+          <div class="payment-icons" style="font-size: 1.5rem; color: var(--text-light);">
             <i class="fab fa-cc-mastercard"></i>
             <i class="fab fa-cc-visa"></i>
             <i class="fab fa-cc-paypal"></i>
@@ -262,16 +312,14 @@
           <h4>Navigation</h4>
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">News & Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="brands.html">Brands</a></li>
-            <li><a href="press.html">Press Center</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Support</h4>
           <ul class="footer-links">
-            <li><a href="support.html">Support Center</a></li>
-            <li><a href="service.html">Service</a></li>
+            <li><a href="support.html">Support</a></li>
             <li><a href="returns.html">Returns</a></li>
             <li><a href="giftcards.html">Gift Cards</a></li>
           </ul>
@@ -280,25 +328,27 @@
           <h4>Contact</h4>
           <ul class="footer-links">
             <li><a href="order.html">Order</a></li>
-            <li><a href="checkorder.html">Check Order</a></li>
-            <li><a href="delivery.html">Delivery & Pickup</a></li>
-            <li><a href="exchanges.html">Exchanges</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Trending Tags:</h4>
           <div class="tags">
-            <span class="tag">5G</span><span class="tag">iPhone</span><span class="tag">Samsung</span><span class="tag">128GB</span><span class="tag">256GB</span><span class="tag">AMOLED</span><span class="tag">Fast Charging</span>
+            <span class="tag">5G</span>
+            <span class="tag">iPhone</span>
+            <span class="tag">Samsung</span>
+            <span class="tag">128GB</span>
+            <span class="tag">AMOLED</span>
           </div>
         </div>
       </div>
-      <div class="copyright">
+    <div class="copyright">
         © Boost Electronics. All Rights Reserved. | Designed & Developed By <a href="https://sarahadevelopers.co.ke" target="_blank">Saraha Developers</a>
       </div>
     </div>
   </footer>
 
-  <!-- Swiper JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="smartphones.js"></script>
 </body>

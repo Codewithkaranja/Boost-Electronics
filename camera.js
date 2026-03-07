@@ -1,339 +1,636 @@
-    // ---------- CAMERA PRODUCT DATA ----------
-    const cameras = [
-      {
-        id: 301,
-        name: "Canon EOS R50 Mirrorless Camera with 18-45mm Lens",
-        category: "Cameras",
-        tags: ["Canon", "Mirrorless", "4K", "Vlogging", "24.2MP"],
-        price: 89999,
-        oldPrice: 99999,
-        stock: "In stock",
-        images: [
-          "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"
-        ],
-        breadcrumb: "Home / Cameras / Canon",
-        specs: [
-          { feat: "Sensor", spec: "24.2MP APS-C CMOS" },
-          { feat: "Processor", spec: "DIGIC X" },
-          { feat: "Video", spec: "4K 30p, 1080p 120p" },
-          { feat: "AF System", spec: "Dual Pixel CMOS AF II" },
-          { feat: "Screen", spec: "3.0″ Vari-angle Touchscreen" }
-        ],
-        delivery: "1-2 days • 1 year warranty",
-        description: "Compact, lightweight mirrorless camera perfect for vlogging and content creation."
-      },
-      {
-        id: 302,
-        name: "Sony ZV-E10 Vlogging Camera with 16-50mm Lens",
-        category: "Cameras",
-        tags: ["Sony", "Mirrorless", "Vlogging", "4K", "24.2MP"],
-        price: 79999,
-        oldPrice: 89999,
-        stock: "In stock",
-        images: ["https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&h=400&fit=crop"],
-        breadcrumb: "Home / Cameras / Sony",
-        specs: [
-          { feat: "Sensor", spec: "24.2MP APS-C CMOS" },
-          { feat: "Video", spec: "4K 30p, 1080p 120p" },
-          { feat: "AF System", spec: "Real-time Eye AF" },
-          { feat: "Screen", spec: "3.0″ Vari-angle Touchscreen" },
-          { feat: "Microphone", spec: "Built-in directional 3-capsule" }
-        ],
-        delivery: "1-2 days",
-        description: "Designed specifically for vloggers with product showcase mode and background defocus."
-      },
-      {
-        id: 303,
-        name: "Nikon D7500 DSLR Camera with 18-140mm Lens",
-        category: "Cameras",
-        tags: ["Nikon", "DSLR", "4K", "20.9MP"],
-        price: 119999,
-        oldPrice: 134999,
-        stock: "In stock",
-        images: ["https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&h=400&fit=crop"],
-        breadcrumb: "Home / Cameras / Nikon",
-        specs: [
-          { feat: "Sensor", spec: "20.9MP DX-format CMOS" },
-          { feat: "Processor", spec: "EXPEED 5" },
-          { feat: "Video", spec: "4K 30p" },
-          { feat: "AF System", spec: "51-point AF" },
-          { feat: "Continuous Shooting", spec: "8 fps" }
-        ],
-        delivery: "1-2 days",
-        description: "Versatile DSLR with excellent image quality and rugged build."
-      },
-      {
-        id: 304,
-        name: "GoPro Hero 12 Black Action Camera",
-        category: "Cameras",
-        tags: ["GoPro", "Action Camera", "5.3K", "Waterproof"],
-        price: 54999,
-        oldPrice: 62999,
-        stock: "In stock",
-        images: ["https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&h=400&fit=crop"],
-        breadcrumb: "Home / Cameras / GoPro",
-        specs: [
-          { feat: "Video", spec: "5.3K 60p, 4K 120p" },
-          { feat: "Photo", spec: "27MP" },
-          { feat: "Stabilization", spec: "HyperSmooth 6.0" },
-          { feat: "Waterproof", spec: "10m" },
-          { feat: "Front Screen", spec: "Yes" }
-        ],
-        delivery: "1-2 days",
-        description: "The most advanced GoPro yet with exceptional stabilization and image quality."
-      },
-      {
-        id: 305,
-        name: "Fujifilm X-T30 II Mirrorless Camera with 18-55mm Lens",
-        category: "Cameras",
-        tags: ["Fujifilm", "Mirrorless", "26.1MP", "4K"],
-        price: 104999,
-        oldPrice: 114999,
-        stock: "In stock",
-        images: ["https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&h=400&fit=crop"],
-        breadcrumb: "Home / Cameras / Fujifilm",
-        specs: [
-          { feat: "Sensor", spec: "26.1MP X-Trans CMOS 4" },
-          { feat: "Processor", spec: "X-Processor 4" },
-          { feat: "Video", spec: "4K 30p" },
-          { feat: "AF System", spec: "425-point hybrid AF" },
-          { feat: "Film Simulations", spec: "18 modes" }
-        ],
-        delivery: "1-2 days",
-        description: "Compact mirrorless with classic design and outstanding color science."
-      },
-      {
-        id: 306,
-        name: "Panasonic Lumix G100 Vlogging Camera with 12-32mm Lens",
-        category: "Cameras",
-        tags: ["Panasonic", "Mirrorless", "Vlogging", "4K"],
-        price: 59999,
-        oldPrice: 69999,
-        stock: "In stock",
-        images: ["https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&h=400&fit=crop"],
-        breadcrumb: "Home / Cameras / Panasonic",
-        specs: [
-          { feat: "Sensor", spec: "20.3MP Micro Four Thirds" },
-          { feat: "Video", spec: "4K 30p" },
-          { feat: "Audio", spec: "Nokia OZO Audio" },
-          { feat: "Screen", spec: "3.0″ Vari-angle" }
-        ],
-        delivery: "1-2 days",
-        description: "Designed for vloggers with professional audio and easy smartphone connectivity."
-      },
-      {
-        id: 307,
-        name: "Instax Mini 11 Instant Camera",
-        category: "Cameras",
-        tags: ["Fujifilm", "Instant", "Analog"],
-        price: 8999,
-        oldPrice: 10999,
-        stock: "In stock",
-        images: ["https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&h=400&fit=crop"],
-        breadcrumb: "Home / Cameras / Fujifilm",
-        specs: [
-          { feat: "Film", spec: "Instax Mini" },
-          { feat: "Lens", spec: "60mm f/12.7" },
-          { feat: "Exposure", spec: "Automatic" },
-          { feat: "Selfie Mode", spec: "Yes (close-up lens)" }
-        ],
-        delivery: "1-2 days",
-        description: "Fun and easy instant camera for parties and memories."
-      },
-      {
-        id: 308,
-        name: "DJI Osmo Pocket 3 Creator Combo",
-        category: "Cameras",
-        tags: ["DJI", "Gimbal", "4K", "Vlogging"],
-        price: 69999,
-        oldPrice: 79999,
-        stock: "In stock",
-        images: ["https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600&h=400&fit=crop"],
-        breadcrumb: "Home / Cameras / DJI",
-        specs: [
-          { feat: "Sensor", spec: "1-inch CMOS" },
-          { feat: "Video", spec: "4K 120p" },
-          { feat: "Stabilization", spec: "3-axis mechanical" },
-          { feat: "Screen", spec: "2.0″ rotatable touchscreen" },
-          { feat: "Tracking", spec: "ActiveTrack 6.0" }
-        ],
-        delivery: "1-2 days",
-        description: "All-in-one pocket gimbal camera for smooth, cinematic footage."
-      }
-    ];
+/**
+ * Boost Electronics – Cameras Page
+ * Matches headphones/laptops/smartphones structure.
+ */
 
-    // Helper to render product card
-    function renderProductCard(product) {
-      return `
-        <div class="product-card" data-id="${product.id}">
-          <div class="product-image"><img src="${product.images[0]}" alt="${product.name}"></div>
-          <div class="product-tags">${product.tags.join(', ')}</div>
-          <div class="product-title">${product.name}</div>
-          <div class="product-category">${product.category}</div>
-          <div class="product-price">KSh ${product.price.toLocaleString()}.00</div>
+'use strict';
+
+// ---------- PRODUCT DATA ----------
+const cameras = [
+  {
+    id: 501,
+    name: "Canon EOS R50 Mirrorless Camera with 18-45mm Lens",
+    category: "Cameras",
+    brand: "canon",
+    tags: ["Canon", "Mirrorless", "24.2MP", "4K Video"],
+    price: 85000,
+    oldPrice: 95000,
+    stock: "In stock",
+    images: [
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&h=400&fit=crop"
+    ],
+    breadcrumb: "Home / Cameras / Canon",
+    specs: [
+      { feat: "Sensor", spec: "24.2MP APS-C CMOS" },
+      { feat: "Video", spec: "4K 30p" },
+      { feat: "Autofocus", spec: "Dual Pixel CMOS AF II" },
+      { feat: "LCD", spec: "3.0-inch Vari-angle" },
+      { feat: "Weight", spec: "375g" }
+    ],
+    delivery: "1-2 days • 1 year warranty",
+    description: "Compact mirrorless camera perfect for content creators.",
+    rating: 4.7,
+    reviews: 84
+  },
+  {
+    id: 502,
+    name: "Nikon Z fc Mirrorless Camera with 16-50mm Lens",
+    category: "Cameras",
+    brand: "nikon",
+    tags: ["Nikon", "Mirrorless", "20.9MP", "Retro"],
+    price: 95000,
+    oldPrice: 110000,
+    stock: "In stock",
+    images: ["https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"],
+    breadcrumb: "Home / Cameras / Nikon",
+    specs: [
+      { feat: "Sensor", spec: "20.9MP APS-C CMOS" },
+      { feat: "Video", spec: "4K 30p" },
+      { feat: "Viewfinder", spec: "2.36M-dot OLED" },
+      { feat: "LCD", spec: "3.0-inch Vari-angle" },
+      { feat: "Design", spec: "Retro style" }
+    ],
+    delivery: "1-2 days",
+    description: "Stylish mirrorless camera with classic design.",
+    rating: 4.8,
+    reviews: 62
+  },
+  {
+    id: 503,
+    name: "Sony A7 IV Full-Frame Mirrorless Camera Body",
+    category: "Cameras",
+    brand: "sony",
+    tags: ["Sony", "Full-Frame", "33MP", "4K Video"],
+    price: 245000,
+    oldPrice: 280000,
+    stock: "In stock",
+    images: ["https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"],
+    breadcrumb: "Home / Cameras / Sony",
+    specs: [
+      { feat: "Sensor", spec: "33MP Full-Frame CMOS" },
+      { feat: "Video", spec: "4K 60p" },
+      { feat: "Autofocus", spec: "759-point phase-detect" },
+      { feat: "IBIS", spec: "5-axis stabilization" },
+      { feat: "LCD", spec: "3.0-inch Vari-angle" }
+    ],
+    delivery: "1-2 days",
+    description: "Versatile full-frame hybrid camera for photo and video.",
+    rating: 4.9,
+    reviews: 126
+  },
+  {
+    id: 504,
+    name: "Fujifilm X-T5 Mirrorless Camera Body",
+    category: "Cameras",
+    brand: "fujifilm",
+    tags: ["Fujifilm", "Mirrorless", "40MP", "Film Simulation"],
+    price: 195000,
+    oldPrice: 220000,
+    stock: "In stock",
+    images: ["https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"],
+    breadcrumb: "Home / Cameras / Fujifilm",
+    specs: [
+      { feat: "Sensor", spec: "40MP APS-C X-Trans CMOS" },
+      { feat: "Video", spec: "6.2K 30p" },
+      { feat: "IBIS", spec: "5-axis" },
+      { feat: "Film Sims", spec: "19 modes" },
+      { feat: "LCD", spec: "3.0-inch Vari-angle" }
+    ],
+    delivery: "1-2 days",
+    description: "High-resolution camera with classic controls.",
+    rating: 4.9,
+    reviews: 73
+  },
+  {
+    id: 505,
+    name: "Panasonic Lumix GH6 Mirrorless Camera Body",
+    category: "Cameras",
+    brand: "panasonic",
+    tags: ["Panasonic", "Micro Four Thirds", "Video", "25.2MP"],
+    price: 175000,
+    oldPrice: 200000,
+    stock: "In stock",
+    images: ["https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"],
+    breadcrumb: "Home / Cameras / Panasonic",
+    specs: [
+      { feat: "Sensor", spec: "25.2MP Micro Four Thirds" },
+      { feat: "Video", spec: "5.7K 60p" },
+      { feat: "IBIS", spec: "7.5-stop" },
+      { feat: "LCD", spec: "3.0-inch Vari-angle" },
+      { feat: "Cooling", spec: "Fan for unlimited recording" }
+    ],
+    delivery: "1-2 days",
+    description: "Video-focused camera with professional features.",
+    rating: 4.7,
+    reviews: 58
+  },
+  {
+    id: 506,
+    name: "GoPro Hero 12 Black Action Camera",
+    category: "Cameras",
+    brand: "gopro",
+    tags: ["GoPro", "Action", "5.3K Video", "Waterproof"],
+    price: 45000,
+    oldPrice: 55000,
+    stock: "In stock",
+    images: ["https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"],
+    breadcrumb: "Home / Cameras / GoPro",
+    specs: [
+      { feat: "Video", spec: "5.3K 60p" },
+      { feat: "Photo", spec: "27MP" },
+      { feat: "Stabilization", spec: "HyperSmooth 6.0" },
+      { feat: "Waterproof", spec: "10m" },
+      { feat: "Battery", spec: "Enduro" }
+    ],
+    delivery: "1-2 days",
+    description: "The ultimate action camera for adventures.",
+    rating: 4.8,
+    reviews: 312
+  },
+  {
+    id: 507,
+    name: "Leica Q3 Compact Full-Frame Camera",
+    category: "Cameras",
+    brand: "leica",
+    tags: ["Leica", "Full-Frame", "60MP", "Fixed Lens"],
+    price: 650000,
+    oldPrice: 720000,
+    stock: "In stock",
+    images: ["https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"],
+    breadcrumb: "Home / Cameras / Leica",
+    specs: [
+      { feat: "Sensor", spec: "60MP Full-Frame CMOS" },
+      { feat: "Lens", spec: "28mm f/1.7 Summilux" },
+      { feat: "Video", spec: "8K 30p" },
+      { feat: "LCD", spec: "3.0-inch Tilting" },
+      { feat: "EVF", spec: "5.76M-dot OLED" }
+    ],
+    delivery: "1-2 days",
+    description: "Premium compact camera with exceptional optics.",
+    rating: 5.0,
+    reviews: 27
+  },
+  {
+    id: 508,
+    name: "Canon EOS 2000D DSLR with 18-55mm Lens",
+    category: "Cameras",
+    brand: "canon",
+    tags: ["Canon", "DSLR", "24.1MP", "Beginner"],
+    price: 55000,
+    oldPrice: 65000,
+    stock: "In stock",
+    images: ["https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&h=400&fit=crop"],
+    breadcrumb: "Home / Cameras / Canon",
+    specs: [
+      { feat: "Sensor", spec: "24.1MP APS-C CMOS" },
+      { feat: "Video", spec: "Full HD 30p" },
+      { feat: "LCD", spec: "3.0-inch Fixed" },
+      { feat: "Lens", spec: "EF-S 18-55mm f/3.5-5.6" },
+      { feat: "Connectivity", spec: "Wi-Fi" }
+    ],
+    delivery: "1-2 days",
+    description: "Entry-level DSLR perfect for learning photography.",
+    rating: 4.5,
+    reviews: 210
+  }
+];
+
+// ---------- GLOBAL VARIABLES ----------
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let currentProduct = null;
+let modalSwiper = null;
+
+// ---------- HELPER FUNCTIONS ----------
+function showToast(message) {
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.style.cssText = `
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: var(--primary, #1A4D2E);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 999;
+    `;
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.style.opacity = '1';
+  setTimeout(() => {
+    toast.style.opacity = '0';
+  }, 2000);
+}
+
+function renderRating(rating, reviews) {
+  let stars = '';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= Math.floor(rating)) stars += '<i class="fas fa-star"></i>';
+    else if (i === Math.ceil(rating) && rating % 1 !== 0) stars += '<i class="fas fa-star-half-alt"></i>';
+    else stars += '<i class="far fa-star"></i>';
+  }
+  return `<div class="product-rating">${stars} <span>(${reviews})</span></div>`;
+}
+
+function renderProductCard(product) {
+  const discount = product.oldPrice ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100) : 0;
+  return `
+    <div class="product-card" data-id="${product.id}">
+      ${discount > 0 ? `<div class="discount-badge">-${discount}%</div>` : ''}
+      <div class="product-actions">
+        <button class="wishlist-btn" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+        <button class="quickview-btn" aria-label="Quick view"><i class="far fa-eye"></i></button>
+        <button class="add-to-cart-card" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+      </div>
+      <div class="product-image"><img src="${product.images[0]}" alt="${product.name}" loading="lazy"></div>
+      <div class="product-tags">${product.tags.slice(0, 2).join(', ')}</div>
+      <div class="product-title">${product.name}</div>
+      ${renderRating(product.rating, product.reviews)}
+      <div class="product-price">KSh ${product.price.toLocaleString()}</div>
+    </div>
+  `;
+}
+
+// ---------- CART FUNCTIONS ----------
+function updateCartUI() {
+  const count = cart.reduce((acc, item) => acc + item.quantity, 0);
+  const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+  document.getElementById('cartCount').innerText = count;
+  document.getElementById('cartTotal').innerText = `KSh ${total.toLocaleString()}`;
+  document.getElementById('sidebarTotal').innerText = `KSh ${total.toLocaleString()}`;
+
+  const cartItemsDiv = document.getElementById('cartItems');
+  if (!cartItemsDiv) return;
+  cartItemsDiv.innerHTML = '';
+  cart.forEach(item => {
+    cartItemsDiv.innerHTML += `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}">
+        <div class="cart-item-details">
+          <div class="cart-item-title">${item.name.substring(0, 30)}...</div>
+          <div class="cart-item-price">KSh ${item.price.toLocaleString()} x ${item.quantity}</div>
+          <div class="cart-item-remove" data-id="${item.id}">Remove</div>
         </div>
-      `;
-    }
+      </div>
+    `;
+  });
 
-    // Populate cameras grid
-    const camerasGrid = document.getElementById('camerasGrid');
-    function renderCameras(productsArray) {
-      camerasGrid.innerHTML = productsArray.map(renderProductCard).join('');
-    }
-    renderCameras(cameras);
-
-    // Sort functionality
-    document.getElementById('sortFilter').addEventListener('change', (e) => {
-      let sorted = [...cameras];
-      const val = e.target.value;
-      if (val === 'priceLow') sorted.sort((a,b) => a.price - b.price);
-      else if (val === 'priceHigh') sorted.sort((a,b) => b.price - a.price);
-      else if (val === 'name') sorted.sort((a,b) => a.name.localeCompare(b.name));
-      renderCameras(sorted);
+  document.querySelectorAll('.cart-item-remove').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = parseInt(e.target.dataset.id);
+      cart = cart.filter(item => item.id !== id);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartUI();
+      showToast('Item removed from cart');
     });
+  });
+}
 
-    // Search functionality (within cameras)
-    const searchInput = document.getElementById('searchInput');
-    const searchBtn = document.getElementById('searchBtn');
-    function filterCameras() {
-      const term = searchInput.value.toLowerCase();
-      const filtered = cameras.filter(p => 
-        p.name.toLowerCase().includes(term) || 
-        p.tags.some(t => t.toLowerCase().includes(term))
-      );
+function addToCart(product, quantity = 1) {
+  const existing = cart.find(item => item.id === product.id);
+  if (existing) {
+    existing.quantity += quantity;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0],
+      quantity: quantity
+    });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartUI();
+  showToast('Added to cart');
+}
+
+// ---------- GRID RENDERING ----------
+const camerasGrid = document.getElementById('camerasGrid');
+function renderCameras(productsArray) {
+  camerasGrid.innerHTML = productsArray.map(renderProductCard).join('');
+}
+renderCameras(cameras);
+
+// ---------- FILTER & SORT ----------
+document.getElementById('sortFilter').addEventListener('change', (e) => {
+  let sorted = [...cameras];
+  const val = e.target.value;
+  if (val === 'priceLow') sorted.sort((a,b) => a.price - b.price);
+  else if (val === 'priceHigh') sorted.sort((a,b) => b.price - a.price);
+  else if (val === 'name') sorted.sort((a,b) => a.name.localeCompare(b.name));
+  renderCameras(sorted);
+});
+
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+function filterCameras() {
+  const term = searchInput.value.toLowerCase();
+  const filtered = cameras.filter(p => 
+    p.name.toLowerCase().includes(term) || 
+    p.tags.some(t => t.toLowerCase().includes(term))
+  );
+  renderCameras(filtered);
+}
+searchBtn.addEventListener('click', filterCameras);
+searchInput.addEventListener('keyup', (e) => { if (e.key === 'Enter') filterCameras(); });
+
+document.getElementById('allCategoriesBtn').addEventListener('click', () => {
+  renderCameras(cameras);
+  searchInput.value = '';
+});
+
+// ---------- SHOP CATEGORIES DROPDOWN ----------
+const shopToggle = document.getElementById('shopCategoriesToggle');
+const categoriesDropdown = document.getElementById('categoriesDropdown');
+shopToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  categoriesDropdown.classList.toggle('show');
+});
+document.addEventListener('click', (e) => {
+  if (!shopToggle.contains(e.target) && !categoriesDropdown.contains(e.target)) {
+    categoriesDropdown.classList.remove('show');
+  }
+});
+
+// Category/Brand filter
+document.querySelectorAll('.categories-grid a, .dropdown-menu a, .mobile-dropdown-menu a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const brand = link.dataset.brand;
+    const category = link.dataset.category;
+    if (brand) {
+      const filtered = cameras.filter(p => p.brand === brand);
+      renderCameras(filtered);
+    } else if (category) {
+      const filtered = cameras.filter(p => p.category.toLowerCase() === category.toLowerCase() || p.brand === category);
       renderCameras(filtered);
     }
-    searchBtn.addEventListener('click', filterCameras);
-    searchInput.addEventListener('keyup', (e) => { if (e.key === 'Enter') filterCameras(); });
+    categoriesDropdown.classList.remove('show');
+  });
+});
 
-    // Trending swiper (first 6 cameras)
-    const trendingWrapper = document.getElementById('trendingSwiperWrapper');
-    trendingWrapper.innerHTML = cameras.slice(0,6).map(p => `
-      <div class="swiper-slide">${renderProductCard(p)}</div>
-    `).join('');
+// "Cameras" main link resets
+document.querySelectorAll('.dropdown-toggle[href="cameras.html"], .mobile-dropdown-toggle[href="cameras.html"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    renderCameras(cameras);
+  });
+});
 
-    // Modal functionality
-    const modalOverlay = document.getElementById('modalOverlay');
-    const modalClose = document.getElementById('modalClose');
-    let currentProduct = null;
+// ---------- DESKTOP DROPDOWN (click toggles) ----------
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const dropdown = toggle.closest('.dropdown');
+    dropdown.classList.toggle('active');
+    document.querySelectorAll('.dropdown.active').forEach(d => {
+      if (d !== dropdown) d.classList.remove('active');
+    });
+  });
+});
 
-    function openModal(productId) {
-      const product = cameras.find(p => p.id == productId);
-      if (!product) return;
-      currentProduct = product;
-      document.getElementById('modalBreadcrumb').innerText = product.breadcrumb || 'Home / Cameras';
-      document.getElementById('modalMainImg').innerHTML = `<img src="${product.images[0]}" alt="">`;
-      let thumbs = '';
-      product.images.forEach((img, idx) => {
-        thumbs += `<div class="modal-thumb ${idx===0?'active':''}" onclick="document.getElementById('modalMainImg').innerHTML='<img src=\\''+img+'\\'>'"><img src="${img}" alt=""></div>`;
-      });
-      document.getElementById('modalThumbnails').innerHTML = thumbs;
-      document.getElementById('modalTitle').innerText = product.name;
-      document.getElementById('modalTags').innerText = product.tags.join(', ');
-      document.getElementById('modalStock').innerText = product.stock || 'In stock';
-      document.getElementById('modalPrice').innerText = `KSh ${product.price.toLocaleString()}.00`;
-      let specRows = '';
-      product.specs.forEach(s => {
-        specRows += `<tr><td>${s.feat}</td><td>${s.spec}</td></tr>`;
-      });
-      document.getElementById('modalSpecs').innerHTML = specRows;
-      document.getElementById('modalDelivery').innerText = product.delivery || 'Estimated delivery 1-2 days';
-      document.getElementById('tabDetails').innerHTML = `<p>${product.description || 'No details available.'}</p>`;
-      document.getElementById('tabReviews').innerHTML = '<p>No reviews yet.</p>';
-      // Related cameras (same category, exclude current)
-      const related = cameras.filter(p => p.id != productId && p.category === product.category).slice(0,4);
-      document.getElementById('relatedGrid').innerHTML = related.map(r => `
-        <div class="related-card" onclick="openModal(${r.id})">
-          <img src="${r.images[0]}" style="height:100px; width:100%; object-fit:cover;">
-          <p style="font-weight:600; font-size:0.9rem;">${r.name.substring(0,30)}...</p>
-          <p style="color:var(--primary);">KSh ${r.price.toLocaleString()}</p>
-        </div>
-      `).join('');
-      modalOverlay.style.display = 'block';
-      document.body.style.overflow = 'hidden';
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
+  }
+});
+
+// ---------- TRENDING SWIPER ----------
+const trendingWrapper = document.getElementById('trendingSwiperWrapper');
+if (trendingWrapper) {
+  trendingWrapper.innerHTML = cameras.slice(0, 6).map(p => `
+    <div class="swiper-slide">${renderProductCard(p)}</div>
+  `).join('');
+  new Swiper('.trending-swiper', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    loop: true,
+    pagination: { el: '.trending-swiper .swiper-pagination', clickable: true },
+    breakpoints: {
+      640: { slidesPerView: 3 },
+      1024: { slidesPerView: 5 }
     }
+  });
+}
 
-    document.addEventListener('click', (e) => {
-      const card = e.target.closest('.product-card');
-      if (card) openModal(card.dataset.id);
-    });
+// ---------- MODAL ----------
+const modalOverlay = document.getElementById('modalOverlay');
+const modalClose = document.getElementById('modalClose');
 
-    modalClose.addEventListener('click', () => {
-      modalOverlay.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    });
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) {
-        modalOverlay.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-    });
+function openModal(productId) {
+  const product = cameras.find(p => p.id == productId);
+  if (!product) return;
+  currentProduct = product;
 
-    // Quantity buttons
-    document.getElementById('incrQty').addEventListener('click', () => {
-      let q = parseInt(document.getElementById('quantity').value);
-      document.getElementById('quantity').value = q + 1;
-    });
-    document.getElementById('decrQty').addEventListener('click', () => {
-      let q = parseInt(document.getElementById('quantity').value);
-      if (q > 1) document.getElementById('quantity').value = q - 1;
-    });
+  document.getElementById('modalBreadcrumb').innerText = product.breadcrumb || 'Home / Cameras';
+  document.getElementById('modalTitle').innerText = product.name;
+  document.getElementById('modalTags').innerText = product.tags.join(', ');
+  document.getElementById('modalStock').innerText = product.stock || 'In stock';
+  document.getElementById('modalPrice').innerText = `KSh ${product.price.toLocaleString()}`;
 
-    // WhatsApp order
-    document.getElementById('whatsappModal').addEventListener('click', () => {
-      if (!currentProduct) return;
-      const msg = `Hello, I'm interested in: ${currentProduct.name} (KSh ${currentProduct.price})`;
-      window.open(`https://wa.me/254723562484?text=${encodeURIComponent(msg)}`, '_blank');
-    });
+  let specRows = '';
+  product.specs.forEach(s => {
+    specRows += `<tr><td>${s.feat}</td><td>${s.spec}</td></tr>`;
+  });
+  document.getElementById('modalSpecs').innerHTML = specRows;
+  document.getElementById('modalDelivery').innerText = product.delivery || '1-2 days';
 
-    // Add to cart
-    document.getElementById('addToCartModal').addEventListener('click', () => {
-      alert('Added to cart! (Backend integration coming)');
-    });
+  const swiperWrapper = document.getElementById('modalSwiperWrapper');
+  swiperWrapper.innerHTML = product.images.map(img => `
+    <div class="swiper-slide">
+      <div class="swiper-zoom-container">
+        <img src="${img}" alt="${product.name}">
+      </div>
+    </div>
+  `).join('');
 
-    // Tabs
-    document.querySelectorAll('.tab-header').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab-header').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('tabDetails').style.display = tab.dataset.tab === 'details' ? 'block' : 'none';
-        document.getElementById('tabReviews').style.display = tab.dataset.tab === 'reviews' ? 'block' : 'none';
-      });
-    });
+  const related = cameras.filter(p => p.id != productId && p.category === product.category).slice(0, 6);
+  document.getElementById('relatedGrid').innerHTML = related.map(r => `
+    <div class="related-card" onclick="openModal(${r.id})">
+      <img src="${r.images[0]}" alt="${r.name}">
+      <h5>${r.name.substring(0,25)}...</h5>
+      <p>KSh ${r.price.toLocaleString()}</p>
+    </div>
+  `).join('');
 
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      if (mobileMenu.style.display === 'flex') {
-        mobileMenu.style.display = 'none';
-      } else {
-        mobileMenu.style.display = 'flex';
-      }
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) mobileMenu.style.display = 'none';
-    });
+  // Show modal
+  modalOverlay.style.display = 'flex';
+  document.body.classList.add('modal-open');
 
-    // Swipers
-    new Swiper('.deals-swiper', {
+  // Small delay to ensure modal is fully visible before Swiper init
+  setTimeout(() => {
+    if (modalSwiper) modalSwiper.destroy();
+    modalSwiper = new Swiper('.modal-swiper', {
       slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: { delay: 4000 },
-      pagination: { el: '.swiper-pagination', clickable: true }
-    });
-    new Swiper('.trending-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      pagination: { el: '.swiper-pagination', clickable: true },
+      spaceBetween: 10,
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 }
-      }
+      pagination: { el: '.swiper-pagination', clickable: true },
+      loop: product.images.length > 1,
+      zoom: true,
     });
-    
+  }, 100);
+
+  document.addEventListener('keydown', handleModalKeyDown);
+}
+
+function closeModal() {
+  modalOverlay.style.display = 'none';
+  document.body.classList.remove('modal-open');
+  document.removeEventListener('keydown', handleModalKeyDown);
+}
+
+function handleModalKeyDown(e) {
+  if (e.key === 'Escape') closeModal();
+}
+
+// Click on card (but not action buttons)
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.add-to-cart-card') || e.target.closest('.wishlist-btn') || e.target.closest('.quickview-btn')) {
+    return;
+  }
+  const card = e.target.closest('.product-card');
+  if (card) {
+    e.preventDefault();
+    openModal(card.dataset.id);
+  }
+});
+
+// Quick view button
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.quickview-btn')) {
+    e.preventDefault();
+    const card = e.target.closest('.product-card');
+    if (card) openModal(card.dataset.id);
+  }
+});
+
+modalClose.addEventListener('click', closeModal);
+
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) closeModal();
+});
+
+// ---------- ADD TO CART FROM CARD ----------
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.add-to-cart-card')) {
+    e.preventDefault();
+    e.stopPropagation();
+    const card = e.target.closest('.product-card');
+    if (card) {
+      const id = card.dataset.id;
+      const product = cameras.find(p => p.id == id);
+      addToCart(product, 1);
+    }
+  }
+});
+
+// Wishlist button demo
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.wishlist-btn')) {
+    e.preventDefault();
+    e.stopPropagation();
+    showToast('Added to wishlist (demo)');
+  }
+});
+
+// ---------- MODAL QUANTITY & ACTIONS ----------
+document.getElementById('incrQty').addEventListener('click', () => {
+  let q = parseInt(document.getElementById('quantity').value);
+  document.getElementById('quantity').value = q + 1;
+});
+document.getElementById('decrQty').addEventListener('click', () => {
+  let q = parseInt(document.getElementById('quantity').value);
+  if (q > 1) document.getElementById('quantity').value = q - 1;
+});
+
+document.getElementById('addToCartModal').addEventListener('click', () => {
+  if (!currentProduct) return;
+  const qty = parseInt(document.getElementById('quantity').value);
+  addToCart(currentProduct, qty);
+  closeModal();
+});
+
+document.getElementById('whatsappModal').addEventListener('click', () => {
+  if (!currentProduct) return;
+  const msg = `Hello, I'm interested in: ${currentProduct.name} (KSh ${currentProduct.price})`;
+  window.open(`https://wa.me/254723562484?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+document.getElementById('wishlistModal').addEventListener('click', () => {
+  showToast('Added to wishlist (demo)');
+});
+
+// ---------- MOBILE MENU ----------
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+});
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) mobileMenu.style.display = 'none';
+});
+
+// Mobile dropdown
+document.querySelector('.mobile-dropdown-toggle')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  const parent = e.currentTarget.closest('.mobile-dropdown');
+  parent.classList.toggle('open');
+});
+
+// ---------- CART SIDEBAR ----------
+const cartPreview = document.getElementById('cartPreview');
+const cartSidebar = document.getElementById('cartSidebar');
+const cartClose = document.getElementById('cartClose');
+const overlay = document.getElementById('overlay');
+
+cartPreview.addEventListener('click', () => {
+  cartSidebar.classList.add('open');
+  overlay.classList.add('show');
+});
+
+cartClose.addEventListener('click', () => {
+  cartSidebar.classList.remove('open');
+  overlay.classList.remove('show');
+});
+
+overlay.addEventListener('click', () => {
+  cartSidebar.classList.remove('open');
+  overlay.classList.remove('show');
+});
+
+document.getElementById('checkoutBtn').addEventListener('click', () => {
+  showToast('Proceeding to checkout (demo)');
+});
+
+// ---------- STICKY HEADER SHADOW ----------
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.main-header');
+  header.style.boxShadow = window.scrollY > 50 ? '0 5px 15px rgba(0,0,0,0.08)' : 'none';
+});
+
+// ---------- FLOATING WHATSAPP ----------
+document.querySelector('.whatsapp-float').addEventListener('click', (e) => {
+  e.preventDefault();
+  const message = "Hello, I'm interested in your products";
+  window.open(`https://wa.me/254723562484?text=${encodeURIComponent(message)}`, '_blank');
+});
+
+// ---------- DEALS SWIPER ----------
+new Swiper('.deals-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  autoplay: { delay: 4000 },
+  pagination: { el: '.deals-swiper .swiper-pagination', clickable: true }
+});
+
+// ---------- INIT CART ----------
+updateCartUI();
