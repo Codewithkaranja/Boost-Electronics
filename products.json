@@ -1,0 +1,81 @@
+[
+{
+"id":1,
+"slug":"dell-xps-13-plus",
+"name":"Dell XPS 13 Plus – Intel Core i7, 16GB RAM",
+"category":"laptops",
+"brand":"Dell",
+"price":185000,
+"description":"The Dell XPS 13 Plus delivers powerful Intel Core i7 performance with a sleek premium design. Perfect for professionals and students looking for speed, reliability and portability.",
+"features":[
+"Intel Core i7 processor",
+"16GB RAM",
+"Ultra-thin premium design",
+"Fast SSD storage",
+"Long battery life"
+],
+"specs":{
+"Processor":"Intel Core i7",
+"RAM":"16GB",
+"Storage":"512GB SSD",
+"Display":"13.4 inch",
+"Battery":"Up to 12 hours"
+},
+"images":[
+"https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+]
+},
+
+{
+"id":2,
+"slug":"macbook-air-m2",
+"name":"Apple MacBook Air M2 – 8GB RAM",
+"category":"laptops",
+"brand":"Apple",
+"price":135000,
+"description":"The Apple MacBook Air M2 offers incredible performance with Apple's powerful M2 chip. Lightweight, fast and perfect for work, study and creative tasks.",
+"features":[
+"Apple M2 chip",
+"Retina display",
+"Ultra lightweight",
+"All-day battery life"
+],
+"specs":{
+"Processor":"Apple M2",
+"RAM":"8GB",
+"Storage":"256GB SSD",
+"Display":"13 inch Retina",
+"Battery":"Up to 18 hours"
+},
+"images":[
+"https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+]
+},
+
+{
+"id":3,
+"slug":"iphone-15-pro",
+"name":"Apple iPhone 15 Pro – 128GB",
+"category":"smartphones",
+"brand":"Apple",
+"price":145000,
+"description":"The Apple iPhone 15 Pro features a powerful A17 chip, stunning display and advanced camera system designed for photography and performance.",
+"features":[
+"A17 Pro chip",
+"Professional camera system",
+"Super Retina XDR display",
+"Titanium design"
+],
+"specs":{
+"Processor":"A17 Pro",
+"Storage":"128GB",
+"Camera":"48MP",
+"Display":"6.1 inch",
+"Battery":"All day battery"
+},
+"images":[
+"https://images.unsplash.com/photo-1695048133142-1a20484d2569"
+]
+}
+
+]
