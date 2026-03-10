@@ -2,80 +2,154 @@
 {
 "id":1,
 "slug":"dell-xps-13-plus",
-"name":"Dell XPS 13 Plus – Intel Core i7, 16GB RAM",
+"name":"Dell XPS 13 Plus Intel Core i7 16GB RAM 512GB SSD 13.4\" OLED Laptop",
 "category":"laptops",
 "brand":"Dell",
+"badge":"Hot",
 "price":185000,
-"description":"The Dell XPS 13 Plus delivers powerful Intel Core i7 performance with a sleek premium design. Perfect for professionals and students looking for speed, reliability and portability.",
+
+"description":"The Dell XPS 13 Plus is a premium ultrabook designed for professionals and creators who demand performance, portability and stunning visuals. Powered by Intel Core i7, fast NVMe storage and a gorgeous OLED display, this laptop delivers exceptional speed, multitasking and battery efficiency for both work and entertainment.",
+
 "features":[
-"Intel Core i7 processor",
-"16GB RAM",
-"Ultra-thin premium design",
-"Fast SSD storage",
-"Long battery life"
+"Intel Core i7 12th Gen processor",
+"16GB LPDDR5 RAM",
+"512GB NVMe SSD storage",
+"13.4 inch OLED touchscreen",
+"Ultra thin premium aluminium design",
+"Intel Iris Xe graphics",
+"All day battery life"
 ],
+
 "specs":{
-"Processor":"Intel Core i7",
-"RAM":"16GB",
-"Storage":"512GB SSD",
-"Display":"13.4 inch",
-"Battery":"Up to 12 hours"
+"CPU":"Intel Core i7-1260P (1.8–4.7 GHz)",
+"RAM":"16 GB LPDDR5",
+"Storage":"512 GB NVMe SSD",
+"Display":"13.4″ 4K OLED touchscreen",
+"Battery":"Up to 12 hours",
+"Graphics":"Intel Iris Xe Graphics",
+"Ports":"2 × Thunderbolt 4 USB-C",
+"Connectivity":"Wi-Fi 6E, Bluetooth 5.2",
+"Security":"Fingerprint reader, TPM 2.0",
+"Weight":"1.2 kg",
+"Audio":"Quad speakers with Waves MaxxAudio"
 },
+
+"tags":[
+"intel core i7",
+"16gb ram",
+"512gb ssd",
+"dell xps",
+"ultrabook"
+],
+
 "images":[
-"https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+"https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+"https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+"https://images.unsplash.com/photo-1517336714732-489689fd1ca9",
+"https://images.unsplash.com/photo-1517336714733-489689fd1caa",
+"https://images.unsplash.com/photo-1517336714734-489689fd1cab",
+"https://images.unsplash.com/photo-1517336714735-489689fd1cac"
 ]
 },
 
 {
 "id":2,
 "slug":"macbook-air-m2",
-"name":"Apple MacBook Air M2 – 8GB RAM",
+"name":"Apple MacBook Air M2 8GB RAM 256GB SSD 13.6\" Retina Laptop",
 "category":"laptops",
 "brand":"Apple",
+"badge":"New",
 "price":135000,
-"description":"The Apple MacBook Air M2 offers incredible performance with Apple's powerful M2 chip. Lightweight, fast and perfect for work, study and creative tasks.",
+
+"description":"The Apple MacBook Air M2 combines Apple's powerful M2 chip with an ultra thin design and exceptional battery life. Perfect for students, developers and professionals who want high performance, silent operation and portability.",
+
 "features":[
-"Apple M2 chip",
-"Retina display",
-"Ultra lightweight",
-"All-day battery life"
+"Apple M2 processor",
+"8GB unified memory",
+"256GB SSD storage",
+"13.6 inch Liquid Retina display",
+"Ultra lightweight aluminium body",
+"All day battery life",
+"Magic keyboard with Touch ID"
 ],
+
 "specs":{
-"Processor":"Apple M2",
-"RAM":"8GB",
+"CPU":"Apple M2 8-core processor",
+"RAM":"8GB unified memory",
 "Storage":"256GB SSD",
-"Display":"13 inch Retina",
-"Battery":"Up to 18 hours"
+"Display":"13.6″ Liquid Retina (500 nits)",
+"Battery":"Up to 18 hours",
+"Graphics":"Apple 10-core GPU",
+"Ports":"MagSafe 3, 2 × Thunderbolt / USB 4",
+"Connectivity":"Wi-Fi 6, Bluetooth 5.0",
+"Security":"Touch ID",
+"Weight":"1.24 kg",
+"Audio":"Spatial audio stereo speakers"
 },
+
+"tags":[
+"macbook",
+"apple laptop",
+"m2 chip",
+"retina display"
+],
+
 "images":[
-"https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+"https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+"https://images.unsplash.com/photo-1517336714732-489689fd1ca9",
+"https://images.unsplash.com/photo-1517336714733-489689fd1caa",
+"https://images.unsplash.com/photo-1517336714734-489689fd1cab",
+"https://images.unsplash.com/photo-1517336714735-489689fd1cac"
 ]
 },
 
 {
 "id":3,
 "slug":"iphone-15-pro",
-"name":"Apple iPhone 15 Pro – 128GB",
+"name":"Apple iPhone 15 Pro 128GB A17 Pro 6.1\" Super Retina XDR",
 "category":"smartphones",
 "brand":"Apple",
+"badge":"Hot",
 "price":145000,
-"description":"The Apple iPhone 15 Pro features a powerful A17 chip, stunning display and advanced camera system designed for photography and performance.",
+
+"description":"The Apple iPhone 15 Pro introduces the powerful A17 Pro chip with a stunning titanium design and advanced camera system. Built for creators, gamers and professionals who want flagship performance and incredible photography.",
+
 "features":[
-"A17 Pro chip",
-"Professional camera system",
-"Super Retina XDR display",
-"Titanium design"
+"A17 Pro processor",
+"128GB storage",
+"48MP professional camera system",
+"6.1 inch Super Retina XDR display",
+"Titanium premium design",
+"All day battery life",
+"5G ultra fast connectivity"
 ],
+
 "specs":{
-"Processor":"A17 Pro",
+"CPU":"Apple A17 Pro 6-core chip",
+"RAM":"6GB",
 "Storage":"128GB",
-"Camera":"48MP",
-"Display":"6.1 inch",
-"Battery":"All day battery"
+"Camera":"48MP main + 12MP ultra wide + 12MP telephoto",
+"Display":"6.1″ Super Retina XDR OLED",
+"Battery":"All day battery life",
+"Connectivity":"5G, Wi-Fi 6E, Bluetooth 5.3",
+"Face ID":"Advanced Face ID",
+"Weight":"187g",
+"Audio":"Stereo speakers"
 },
+
+"tags":[
+"iphone",
+"apple phone",
+"iphone 15 pro",
+"smartphone"
+],
+
 "images":[
-"https://images.unsplash.com/photo-1695048133142-1a20484d2569"
+"https://images.unsplash.com/photo-1695048133142-1a20484d2569",
+"https://images.unsplash.com/photo-1695048133143-1a20484d2570",
+"https://images.unsplash.com/photo-1695048133144-1a20484d2571",
+"https://images.unsplash.com/photo-1695048133145-1a20484d2572",
+"https://images.unsplash.com/photo-1695048133146-1a20484d2573"
 ]
 }
-
 ]
